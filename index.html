@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Financiera Beto LLC 🤑</h1>
+    <main>
+      <h2>Tu tranquilo. Yo te presto! 💸</h2>
+      <img src="assets/betico.png" alt="betico el contador te apoya" />
+
+      <div class="card">
+        <form class="register-form">
+          <h3>🙏Registrate</h3>
+          <div>
+            <label for="nameinput">Nombre</label>
+            <input id="nameinput" autofocus type="text" name="name" />
+          </div>
+          <div>
+            <label for="lastnameinput">Apellido</label>
+            <input id="lastnameinput" type="text" name="lastname" />
+          </div>
+          <div>
+            <label for="emailinput">Email</label>
+            <input
+              id="emailinput"
+              autocomplete="off"
+              type="email"
+              name="email"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+
+  <style>
+    h1 {
+      padding-left: 10%;
+    }
+
+    img {
+      height: 30vh;
+      padding-bottom: 20px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 1% 10%;
+    }
+
+    .register-form div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .register-form input {
+      height: 20px;
+    }
+
+    .register-form h3 {
+      margin-bottom: 0px;
+    }
+
+    .card {
+      text-align: left;
+      border-radius: 0.5rem;
+      box-shadow: 0 20px 25px 10px rgba(0, 0, 0, 0.1),
+        0 10px 10px 10px rgba(0, 0, 0, 0.04);
+      height: 350px;
+      width: 432px;
+    }
+  </style>
+</html>
