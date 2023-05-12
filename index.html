@@ -4,7 +4,17 @@
     <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
     <link href="css/style.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body>
@@ -33,8 +43,24 @@
               name="email"
             />
           </div>
-          <div class="truora-button">
+          <div
+            class="truora-button"
+            x-data="{
+                 get finishedDemo() {
+                  const query = window.location.search
+
+                  if (!query) {
+                    return false
+                  }
+
+                  const params = new URLSearchParams(query)
+
+                  return params.get('process_id') ? true : false
+                 }
+               }"
+          >
             <a
+              x-show="!finishedDemo"
               href="https://identity.truorastaging.com/preview/IPF5c84557db4c4c4a9e725f360df06ccbe"
               style="
                 text-decoration: none;
@@ -47,6 +73,13 @@
             >
               Validation with Truora
             </a>
+            <button
+              x-show="finishedDemo"
+              class="pure-button pure-button-primary"
+              type="submit"
+            >
+              Ahora si!
+            </button>
           </div>
         </form>
       </div>
